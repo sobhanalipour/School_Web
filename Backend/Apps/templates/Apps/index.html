@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'Apps/css/background.css' %}">
+<link rel="stylesheet" href="{% static 'Apps/css/index.css' %}">
+{% endblock css %}
+
+
+{% block content %}
+<div id="universe"></div>
+
+<section id="Student_cards">
+    <div class="container">
+        <div id="Studentlist" class="row">
+        </div>
+    </div>
+</section>
+
+
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="formtitle">Create</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form class="form mx-auto">
+            <p class="title" id="formtitle">Create</p>
+            <div class="flex">
+                <label>
+                    <input id="studentid" class="input" type="hidden" placeholder="" required="">
+                    <span></span>
+                </label>
+
+                <label>
+                    <input id="student_firstname" class="input" type="text" placeholder="" required="">
+                    <span>Firstname</span>
+                </label>
+
+                <label>
+                    <input id="student_lastname" class="input" type="text" placeholder="" required="">
+                    <span>Lastname</span>
+                </label>
+            </div>
+
+            <label>
+                <input id="student_age" class="input" type="number" placeholder="" required="">
+                <span>Age</span>
+            </label>
+
+            <label>
+                <input id="student_phonenumber" class="input" type="number" placeholder="" required="">
+                <span>Phonenumber</span>
+            </label>
+
+            <label>
+                <input id="student_GPA" class="input" type="number" placeholder="" required="">
+                <span>GPA</span>
+            </label>
+
+            <label>
+                <input id="student_school" class="input" type="text" placeholder="" required="">
+                <span>School</span>
+            </label>
+
+            <label>
+                <input id="student_national_code" class="input" type="number" placeholder="" required="">
+                <span>National_code</span>
+            </label>
+
+            <label>
+                <input id="student_city" class="input" type="text" placeholder="" required="">
+                <span>City</span>
+            </label>
+
+            <select class="form-select" name="" id="student_gender">
+            </select>
+
+            <select class="form-select" name="" id="student_educational_background">
+            </select>
+
+            <select class="form-select" name="" id="studnet_field_of_studey">
+            </select>
+
+            <button id="studentsumbit" class="submit" data-mode="create">Create</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasTopLabel">Student information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div id="information">
+    </div>
+</div>
+
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+    aria-labelledby="offcanvasWithBothOptionsLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Student score</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form class="form mx-auto">
+            <p class="title" id="formtitle2">Update</p>
+
+            <label class="hidden">
+                <input id="lessonid" class="input" type="number" placeholder="" required="">
+                <span>Id</span>
+            </label>
+
+            <label>
+                <input id="lesson1" class="input" type="number" placeholder="" required="">
+                <span>Math</span>
+            </label>
+
+            <label>
+                <input id="lesson2" class="input" type="number" placeholder="" required="">
+                <span>physic</span>
+            </label>
+
+            <label>
+                <input id="lesson3" class="input" type="number" placeholder="" required="">
+                <span>chemistry</span>
+            </label>
+
+            <label>
+                <input id="lesson4" class="input" type="number" placeholder="" required="">
+                <span>hendese</span>
+            </label>
+
+            <label>
+                <input id="lesson5" class="input" type="number" placeholder="" required="">
+                <span>persion</span>
+            </label>
+
+            <button id="Scoresumbit" class="submit" data-mode="update">Update</button>
+        </form>
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'Apps/js/background.js' %}"></script>
+<script src="{% static 'Apps/js/main.js' %}"></script>
+{% endblock js %}
