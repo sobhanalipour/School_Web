@@ -11,12 +11,12 @@ class StudentSerializer(serializers.ModelSerializer) :
 
     def validate_age(self , value) :
         if int(value) < 7 or int(value) > 25 :
-            raise serializers.ValidationError("Please give a correct age!!!")
+            raise serializers.ValidationError("Please give a age between 7 and 25!!!")
         return value
     
     def validate_phonenumber(self , value) :
-        if len(value) < 11 or len(value) > 11 :
-            raise serializers.ValidationError("This phonenumber doesn't correcr!!!")
+        if len(value) != 11 :
+            raise serializers.ValidationError("This phonenumber doesn't correct!!!")
         return value
     
     def validate_GPA(self , value) :
@@ -33,12 +33,12 @@ class OneStudentSerializer(serializers.ModelSerializer) :
 
     def validate_age(self , value) :
         if int(value) < 7 or int(value) > 25 :
-            raise serializers.ValidationError("Please give a correct age!!!")
+            raise serializers.ValidationError("Please give a age between 7 and 25!!!")
         return value
     
     def validate_phonenumber(self , value) :
-        if len(value) < 11 or len(value) > 11 :
-            raise serializers.ValidationError("This phonenumber doesn't correcr!!!")
+        if len(value) != 11 :
+            raise serializers.ValidationError("This phonenumber doesn't correct!!!")
         return value
     
     def validate_GPA(self , value) :

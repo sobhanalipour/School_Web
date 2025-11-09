@@ -22,17 +22,17 @@ urlpatterns = [
     path("teacherupdate/<int:pk>/" , views.TeacherUpdateAPIView.as_view()),
     path("teachercreate/" , views.TeacherCreateAPIView.as_view()),
 # ----------------- Score -------------------
-    path("Score/" , views.ScoreListAPIView.as_view()),
-    path("Scorecreate/" , views.ScoreCreateAPIView.as_view()),
-    path("Scoreupdate/<int:pk>/" , views.ScoreUpdateAPIView.as_view()),
-    path("Scoredelete/<int:pk>/" , views.ScoreDeleteAPIView.as_view()),
+    path("score/" , views.ScoreListAPIView.as_view()),
+    path("scorecreate/" , views.ScoreCreateAPIView.as_view()),
+    path("scoreupdate/<int:pk>/" , views.ScoreUpdateAPIView.as_view()),
+    path("scoredelete/<int:pk>/" , views.ScoreDeleteAPIView.as_view()),
 # ----------------- Lesson -------------------
     path("lesson/" , views.LessonListAPIView.as_view()),
     path("lessoncreate/" , views.LessonCreateAPIView.as_view()),
     path("lessonupdate/<int:pk>/" , views.LessonUpdateAPIView.as_view()),
     path("lessondelete/<int:pk>/" , views.LessonDeleteAPIView.as_view()),
 # ----------------- School -------------------
-    path("School/" , views.SchoolListAPIView.as_view()),
+    path("school/" , views.SchoolListAPIView.as_view()),
 # ----------------- City -------------------
-    path("City/" , views.CityListAPIView.as_view()),
+    path("city/" , views.CityListAPIView.as_view()),
 ]
