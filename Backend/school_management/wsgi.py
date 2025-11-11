@@ -1,5 +1,5 @@
 """
-WSGI config for Student_panel_project project.
+WSGI config for school_management project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

@@ -1,5 +1,5 @@
 """
-ASGI config for Student_panel_project project.
+ASGI config for school_management project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
