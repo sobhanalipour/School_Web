@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "django_filters",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -146,3 +147,8 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
 }
+
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+]
