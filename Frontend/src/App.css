@@ -114,3 +114,12 @@ body {
     font-size: 0.9rem;
     width: 75%;
 }
+
+footer a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+footer a i {
+    font-size: 28px;
+}

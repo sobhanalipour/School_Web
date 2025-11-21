@@ -113,22 +113,88 @@ function App() {
                 <h2 className='fw-bold text-center text-white'>Blog</h2>
                 <div className='row mt-5'>
                     <div className='col-md-3'>
-                        <Card1/>
+                        <Card1 />
                     </div>
 
                     <div className='col-md-3'>
-                        <Card1/>
+                        <Card1 />
                     </div>
 
                     <div className='col-md-3'>
-                        <Card1/>
+                        <Card1 />
                     </div>
 
                     <div className='col-md-3'>
-                        <Card1/>
+                        <Card1 />
                     </div>
                 </div>
             </div>
+
+            <div className='bg-dark mt-5 pt-5 pb-4'>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-md-3'>
+                            <p className='fw-bold text-white'>
+                                Phonenumber : 09147917122
+                            </p>
+                        </div>
+
+                        <div className='col-md-3'>
+                            <p className='fw-bold text-white'>
+                                Email : School@gmail.com
+                            </p>
+                        </div>
+
+                        <div className='col-md-6'>
+                            <p className='fw-bold text-primary'>
+                                Address : Lorem, ipsum dolor sit amet consectetur adipisicingfdvklvm kmdpvfldk l.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer className='bg-dark mt-5'>
+                <div className='container'>
+                    <h2 className='fw-bold text-white text-center pt-5'>School</h2>
+
+                    <div className='row'>
+                        <div className='d-flex fw-bold justify-content-center gap-5 mt-4'>
+                            <a href=''>
+                                Home
+                            </a>
+
+                            <a href=''>
+                                About
+                            </a>
+
+                            <a href=''>
+                                Students
+                            </a>
+
+                            <a href=''>
+                                Teachers
+                            </a>
+                        </div>
+
+                        <div className='d-flex text-white justify-content-center gap-5 mt-4'>
+                            <a href="">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+
+                            <a href="">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <p className='fw-bold text-white text-center mt-4 pb-4'>Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </footer>
         </section>
     )
 }
