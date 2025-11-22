@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from "react-router";
 // import AllStudentsCard from './assets/components/AllStudents-cards'
 import Navbar from './assets/components/Navbar'
 import './App.css'
@@ -18,7 +19,7 @@ function App() {
                     <div id='header' className='col-md-6 text-white'>
                         <h1>School .....</h1>
                         <p className='mt-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum perferendis vero, magni architecto excepturi repellendus voluptatem ex, natus dolorum beatae eum assumenda minima sunt tenetur earum quae! Distinctio nemo quidem officia illo accusamus libero facere iusto illum tempore obcaecati adipisci amet blanditiis harum magnam, ipsam nostrum perferendis? Obcaecati, autem possimus!</p>
-                        <Button title="See More ..."></Button>
+                        <Link to="/about-school"><Button title="See More ..."></Button></Link>
                     </div>
 
                     <div className='col-md-6'>
@@ -38,7 +39,7 @@ function App() {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur optio iusto perspiciatis ipsum magni. Nisi aut deleniti porro vel? Officia molestiae veniam doloremque ad! Nobis eum dicta, amet consectetur repellendus tempore doloremque. Esse temporibus eius debitis! Necessitatibus, aspernatur? Aliquid debitis consequatur assumenda, cupiditate totam commodi exercitationem veritatis nihil incidunt animi? ldkvlkd dlkvlkd dvlv d dlk fpdkvd;l;mvpdsmlkv kdmslv dskmdsf kvmpdask vdlml;dlkmd lvkdl;a v,d ;lcv dvlkd lcvdsfkffffl
                         </p>
 
-                        <Button title="See More ..."></Button>
+                        <Link to="/about-school"><Button title="See More ..."></Button></Link>
                     </div>
                 </div>
             </div>
@@ -160,13 +161,17 @@ function App() {
 
                     <div className='row'>
                         <div className='d-flex fw-bold justify-content-center gap-5 mt-4'>
-                            <a href=''>
-                                Home
-                            </a>
+                            <Link to="/">
+                                <a>
+                                    Home
+                                </a>
+                            </Link>
 
-                            <a href=''>
-                                About
-                            </a>
+                            <Link to="/about-school">
+                                <a>
+                                    About
+                                </a>
+                            </Link>
 
                             <a href=''>
                                 Students
