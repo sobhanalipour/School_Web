@@ -7,6 +7,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import App from './App.jsx'
 import Aboutpage from './About.jsx';
 import Page404 from './Page404.jsx';
+import Studentspage from './Studentspage.jsx';
 
 
 createRoot(document.getElementById('root')).render(
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />}></Route>
         <Route path="/about-school" element={<Aboutpage />}></Route>
         <Route path="*" element={<Page404 />}></Route>
+        <Route path="/students-school" element={<Studentspage />}></Route>
 
       </Routes>
 

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from "react-router";
 // import AllStudentsCard from './assets/components/AllStudents-cards'
 import Navbar from './assets/components/Navbar'
-import './App.css'
+import './css/App.css/'
 import panter from "./assets/img/School.png/"
 import panter2 from "./assets/img/Students.png/"
 import Button from './assets/components/button'
@@ -12,7 +12,7 @@ import Card1 from './assets/components/Cards1'
 function App() {
     return (
         <section>
-            <Navbar></Navbar>
+            <Navbar />
 
             <div className='container'>
                 <div className='row'>
@@ -50,7 +50,7 @@ function App() {
                         <div class="notification">
                             <div class="notiglow"></div>
                             <div class="notiborderglow"></div>
-                            <div class="notititle"><a href="">See Students List</a></div>
+                            <div class="notititle"><Link to="/students-school"><a href="">See Students List</a></Link></div>
                             <div class="notibody">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae voluptates distinctio in explicabo!</div>
                         </div>
                     </div>
