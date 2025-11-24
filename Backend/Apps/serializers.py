@@ -68,6 +68,18 @@ class GenderSerializer(serializers.ModelSerializer) :
         fields = "__all__"
 
 
+# ------------------ Type of teaching -------------------------------
+class TypeteachingSerializer(serializers.ModelSerializer) :
+    class Meta :
+        model = Typeteaching
+        fields = "__all__"
+
+class OneTypeteachingSerializer(serializers.ModelSerializer) :
+    class Meta :
+        model = Typeteaching
+        fields = "__all__"
+
+
 # ------------------ Teacher -------------------------------
 class TeacherSerializer(serializers.ModelSerializer) :
     class Meta :

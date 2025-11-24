@@ -27,9 +27,18 @@ class Gender(models.Model) :
         return self.title
 
 
+# Type of teaching :
+class Typeteaching(models.Model) :
+    title = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.title
+
+
 # Teacher :
 class Teacher(models.Model) :
     title = models.CharField(max_length=255)
+    type = models.ManyToManyField(Typeteaching , null=True , blank=True)
 
     def __str__(self):
         return self.title

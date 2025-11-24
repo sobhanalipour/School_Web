@@ -78,6 +78,33 @@ class GenderListAPIView(ListAPIView):
     serializer_class = GenderSerializer
 
 
+# ----------------- Type of teaching -------------------
+class TeachListAPIView(ListAPIView):
+    queryset = Typeteaching.objects.all()
+    serializer_class = TypeteachingSerializer
+    permission_classes = [IsAuthenticated]
+    search_fields = ["=teacher__type__title"]
+    ordering = ["teacher__type__title"]
+
+
+class TeachDeleteAPIView(DestroyAPIView):
+    queryset = Typeteaching.objects.all()
+    serializer_class = OneTypeteachingSerializer
+    permission_classes = [IsSuperUser , IsAdminUser]
+
+
+class TeachUpdateAPIView(UpdateAPIView):
+    queryset = Typeteaching.objects.all()
+    serializer_class = OneTypeteachingSerializer
+    permission_classes = [IsSuperUser , IsAdminUser]
+
+
+class TeachCreateAPIView(CreateAPIView):
+    queryset = Typeteaching.objects.all()
+    serializer_class = OneTypeteachingSerializer
+    permission_classes = [IsSuperUser , IsAdminUser]
+
+
 # ----------------- Teacher -------------------
 class TeacherListAPIView(ListAPIView):
     queryset = Teacher.objects.all()
@@ -86,7 +113,7 @@ class TeacherListAPIView(ListAPIView):
     pagination_class = TeacherPagination
     search_fields = ["=teacher__title"]
     ordering = ["teacher__title"]
-    authentication_classes = [JWTAuthentication]
+    # authentication_classes = [JWTAuthentication]
 
 
 class TeacherDeleteAPIView(DestroyAPIView):

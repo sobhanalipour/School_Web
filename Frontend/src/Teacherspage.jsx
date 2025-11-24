@@ -2,27 +2,27 @@ import { useState, useEffect } from 'react'
 import Navbar from './assets/components/Navbar'
 
 
-function StudentsPage() {
-    const [getStudents, setStudents] = useState(null)
+function TeachersPage() {
+    const [getTeachers, setTeachers] = useState(null)
 
-    function Students() {
-        fetch("http://127.0.0.1:8000/Student/list/")
+    function Typeteaching() {
+        fetch("http://127.0.0.1:8000/Student/teacher/")
             .then((res) => {
                 return res.json();
             })
             .then((data) => {
-                setStudents(data.results);
+                setTeachers(data.results);
             })
     }
 
-    useEffect(Students , []);
+    useEffect(Typeteaching, []);
 
     return (
         <section>
             <Navbar />
 
             <h2 className='text-center text-white fw-bold mt-5'>
-                School <span>Students</span>
+                School <span>Teachers</span>
             </h2>
 
             <p className='text-center text-white mt-3'>
@@ -36,22 +36,16 @@ function StudentsPage() {
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Firstname</th>
-                                    <th scope="col">Lastname</th>
-                                    <th scope="col">Gender</th>
-                                    <th scope='col'>field of studey</th>
-                                    <th scope="col">Educational background</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Type of Teaching</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {getStudents && getStudents.map((list) => (
+                                {getTeachers && getTeachers.map((list) => (
                                     <tr>
                                         <th scope="row">{list.id}</th>
-                                        <td>{list.firstname}</td>
-                                        <td>{list.lastname}</td>
-                                        <td>{list.gender}</td>
-                                        <td>{list.field_of_studey}</td>
-                                        <td>{list.educational_background}</td>
+                                        <td>{list.title}</td>
+                                        <td>{list.type}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -65,4 +59,4 @@ function StudentsPage() {
 
 
 
-export default StudentsPage
+export default TeachersPage

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from "react-router";
-// import AllStudentsCard from './assets/components/AllStudents-cards'
 import Navbar from './assets/components/Navbar'
 import './css/App.css/'
 import panter from "./assets/img/School.png/"
 import panter2 from "./assets/img/Students.png/"
 import Button from './assets/components/button'
 import Card1 from './assets/components/Cards1'
+import Footer from './assets/components/Footer';
 
 
 function App() {
@@ -68,7 +68,7 @@ function App() {
                         <div class="notification">
                             <div class="notiglow"></div>
                             <div class="notiborderglow"></div>
-                            <div class="notititle"><a href="">See Teachers List</a></div>
+                            <div class="notititle"><Link to="/teachers-school"><a href="">See Teachers List</a></Link></div>
                             <div class="notibody">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat iste aliquam beatae assumenda!</div>
                         </div>
                     </div>
@@ -155,51 +155,7 @@ function App() {
                 </div>
             </div>
 
-            <footer className='bg-dark mt-5'>
-                <div className='container'>
-                    <h2 className='fw-bold text-white text-center pt-5'>School</h2>
-
-                    <div className='row'>
-                        <div className='d-flex fw-bold justify-content-center gap-5 mt-4'>
-                            <Link to="/">
-                                <a>
-                                    Home
-                                </a>
-                            </Link>
-
-                            <Link to="/about-school">
-                                <a>
-                                    About
-                                </a>
-                            </Link>
-
-                            <a href=''>
-                                Students
-                            </a>
-
-                            <a href=''>
-                                Teachers
-                            </a>
-                        </div>
-
-                        <div className='d-flex text-white justify-content-center gap-5 mt-4'>
-                            <a href="">
-                                <i class="bi bi-instagram"></i>
-                            </a>
-
-                            <a href="">
-                                <i class="bi bi-whatsapp"></i>
-                            </a>
-
-                            <a href="">
-                                <i class="bi bi-facebook"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <p className='fw-bold text-white text-center mt-4 pb-4'>Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </footer>
+            <Footer />
         </section>
     )
 }

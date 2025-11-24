@@ -16,6 +16,11 @@ urlpatterns = [
     path("field_of_studey/" , views.Field_of_studeyListAPIView.as_view()),
 # ----------------- Gender -------------------
     path("gender/" , views.GenderListAPIView.as_view()),
+# ----------------- Type of teaching -------------------
+    path("typeteach/" , views.TeachListAPIView.as_view()),
+    path("typeteachdelete/<int:pk>/" , views.TeachDeleteAPIView.as_view()),
+    path("typeteachupdate/<int:pk>/" , views.TeachUpdateAPIView.as_view()),
+    path("typeteachcreate/" , views.TeachCreateAPIView.as_view()),
 # ----------------- Teacher -------------------
     path("teacher/" , views.TeacherListAPIView.as_view()),
     path("teacherdelete/<int:pk>/" , views.TeacherDeleteAPIView.as_view()),
