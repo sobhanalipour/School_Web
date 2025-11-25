@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navbar from './assets/components/Navbar'
+import Footer from './assets/components/Footer'
 
 
 function TeachersPage() {
@@ -53,6 +54,8 @@ function TeachersPage() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </section>
     )
 }

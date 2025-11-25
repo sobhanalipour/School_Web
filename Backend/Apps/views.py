@@ -82,7 +82,7 @@ class GenderListAPIView(ListAPIView):
 class TeachListAPIView(ListAPIView):
     queryset = Typeteaching.objects.all()
     serializer_class = TypeteachingSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     search_fields = ["=teacher__type__title"]
     ordering = ["teacher__type__title"]
 
@@ -109,7 +109,7 @@ class TeachCreateAPIView(CreateAPIView):
 class TeacherListAPIView(ListAPIView):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
     pagination_class = TeacherPagination
     search_fields = ["=teacher__title"]
     ordering = ["teacher__title"]

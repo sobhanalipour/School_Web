@@ -6,7 +6,7 @@ import panter from "./assets/img/School.png/"
 import panter2 from "./assets/img/Students.png/"
 import Button from './assets/components/button'
 import Card1 from './assets/components/Cards1'
-import Footer from './assets/components/Footer';
+import Footer from './assets/components/Footer'
 
 
 function App() {

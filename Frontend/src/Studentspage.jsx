@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Navbar from './assets/components/Navbar'
+import Footer from './assets/components/Footer'
 
 
 function StudentsPage() {
@@ -15,7 +16,7 @@ function StudentsPage() {
             })
     }
 
-    useEffect(Students , []);
+    useEffect(Students, []);
 
     return (
         <section>
@@ -59,6 +60,8 @@ function StudentsPage() {
                     </div>
                 </div>
             </div>
+
+            <Footer />
         </section>
     )
 }

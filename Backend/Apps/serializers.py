@@ -51,40 +51,40 @@ class OneStudentSerializer(serializers.ModelSerializer) :
 class Educational_backgroundSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Educational_background
-        fields = "__all__"
+        fields = ["title"]
 
 
 # ------------------ Field of studey -------------------------------
 class Field_of_studeySerializer(serializers.ModelSerializer) :
     class Meta :
         model = Field_of_studey
-        fields = "__all__"
+        fields = ["title"]
 
 
 # ------------------ Gender -------------------------------
 class GenderSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Gender
-        fields = "__all__"
+        fields = ["title"]
 
 
 # ------------------ Type of teaching -------------------------------
 class TypeteachingSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Typeteaching
-        fields = "__all__"
+        fields = ["title"]
 
 class OneTypeteachingSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Typeteaching
-        fields = "__all__"
+        fields = ["title"]
 
 
 # ------------------ Teacher -------------------------------
 class TeacherSerializer(serializers.ModelSerializer) :
     class Meta :
         model = Teacher
-        fields = "__all__"
+        fields = ["id" , "title" , "type"]
 
 
 class OneTeacherSerializer(serializers.ModelSerializer) :
