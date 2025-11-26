@@ -26,36 +26,35 @@ class StudentListAPIView(ListAPIView):
     search_fields = ["firstname" , "=school" , "city"]
     ordering_fields = ["lastname"]
     ordering = ["-GPA" , "firstname"]
-    authentication_classes = [JWTAuthentication]
+    # authentication_classes = [JWTAuthentication]
 
 
 class StudentCreateAPIView(CreateAPIView):
     serializer_class = StudentSerializer
     queryset = Students.objects.all()
-    permission_classes = [IsAdminUser , IsSuperUser]
-    authentication_classes = [JWTAuthentication]
+    # authentication_classes = [JWTAuthentication]
 
 
 class StudentDetailAPIView(RetrieveAPIView):
     queryset = Students.objects.all()
     serializer_class = OneStudentSerializer
-    permission_classes = [IsAdminUser]
-    authentication_classes = [JWTAuthentication]
+    # permission_classes = [IsAdminUser]
+    # authentication_classes = [JWTAuthentication]
 
 
 class StudentUpdateAPIView(UpdateAPIView):
     queryset = Students.objects.all()
     serializer_class = OneStudentSerializer
-    permission_classes = [IsAdminUser]
-    authentication_classes = [JWTAuthentication]
+    # permission_classes = [IsAdminUser]
+    # authentication_classes = [JWTAuthentication]
 
 
 
 class StudentDeleteAPIView(DestroyAPIView):
     queryset = Students.objects.all()
     serializer_class = OneStudentSerializer
-    permission_classes = [IsSuperUser]
-    authentication_classes = [JWTAuthentication]
+    # permission_classes = [IsSuperUser]
+    # authentication_classes = [JWTAuthentication]
 
 
 # ----------------- Educational_background -------------------
@@ -141,7 +140,7 @@ class TeacherCreateAPIView(CreateAPIView):
 class ScoreListAPIView(ListAPIView):
     queryset = Score.objects.all()
     serializer_class = ScoreSerializer
-    permission_classes = [IsAdminUser]
+    # permission_classes = [IsAdminUser]
     ordering = ["-score__grade"]
 
 
@@ -192,7 +191,7 @@ class LessonCreateAPIView(CreateAPIView):
 class SchoolListAPIView(ListAPIView) :
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
-    permission_classes = [IsSuperUser , IsAdminUser]
+    # permission_classes = [IsSuperUser , IsAdminUser]
     pagination_class = SchoolPagination
     ordering = ["school__title"]
 
@@ -201,6 +200,6 @@ class SchoolListAPIView(ListAPIView) :
 class CityListAPIView(ListAPIView) :
     queryset = City.objects.all()
     serializer_class = CitySerializer
-    permission_classes = [IsSuperUser , IsAdminUser]
+    # permission_classes = [IsSuperUser , IsAdminUser]
     pagination_class = CityPagination
     ordering = ["city__title"]

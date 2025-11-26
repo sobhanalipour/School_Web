@@ -1,4 +1,5 @@
 import "../componentsCSS/navbar.css/"
+import { Link } from "react-router";
 import Button from "./button"
 import SearchBox from "./search"
 
@@ -20,7 +21,7 @@ function Navbar() {
                     <SearchBox></SearchBox>
 
                     <div className="btn-group">
-                        <Button title="Students"></Button>
+                        <Link to="/students-form"><Button title="Students"></Button></Link>
                     </div>
 
                     <div className="btn-group">
