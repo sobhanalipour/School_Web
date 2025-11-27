@@ -32,6 +32,10 @@ class StudentListAPIView(ListAPIView):
 class StudentCreateAPIView(CreateAPIView):
     serializer_class = StudentSerializer
     queryset = Students.objects.all()
+    def post(self, request, *args, **kwargs):
+        print(request.body)
+        print(request.POST)
+        return super().post(request, *args, **kwargs)
     # authentication_classes = [JWTAuthentication]
 
 

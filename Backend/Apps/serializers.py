@@ -129,11 +129,11 @@ class OneLessonSerializer(serializers.ModelSerializer) :
 class SchoolSerializer(serializers.ModelSerializer) :
     class Meta :
         model = School
-        Fields = "__all__"
+        fields = "__all__"
 
 
 # ------------------ City -------------------------------
 class CitySerializer(serializers.ModelSerializer) :
     class Meta :
         model = City
-        Fields = "__all__"
+        fields = "__all__"

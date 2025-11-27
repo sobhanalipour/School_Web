@@ -115,16 +115,17 @@ function StudentsForm() {
         event.preventDefault();
         axios.post("http://127.0.0.1:8000/Student/create/", {
             "firstname": InputFirstname.current.value,
-            "lastname": InputFirstname.current.value,
-            "age": InputFirstname.current.value,
-            "phonenumber": InputFirstname.current.value,
-            "school": InputFirstname.current.value,
-            "national_code": InputFirstname.current.value,
-            "educational_background": InputFirstname.current.value,
-            "field_of_studey": InputFirstname.current.value,
-            "gender": InputFirstname.current.value,
-            "city": InputFirstname.current.value,
-            "GPA": InputFirstname.current.value,
+            "lastname": InputLastname.current.value,
+            "age": InputAge.current.value,
+            "phonenumber": InputPhonenumber.current.value,
+            "school": InputSchool.current.value,
+            "national_code": InputNationalcode.current.value,
+            "educational_background": InputEducationalbackground.current.value,
+            "field_of_studey": InputFieldofstudey.current.value,
+            "teacher": InputTeacher.current.value,
+            "gender": InputGender.current.value,
+            "city": InputCity.current.value,
+            "GPA": InputGPA.current.value,
         }, {
             headers: {
                 "Content-Type": 'multipart/form-data'
@@ -162,7 +163,7 @@ function StudentsForm() {
                             </div>
                             <div class="mb-2 text-info">
                                 <label class="form-label">Age</label>
-                                <input ref={InputAge} type="number" class="form-control border-3 border-info"
+                                <input ref={InputAge} type="text" class="form-control border-3 border-info"
                                     aria-describedby="emailHelp" />
                                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                             </div>
